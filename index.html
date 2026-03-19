@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etonuge – AI-powered Herbal Quality Testing</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>Etonuge</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Revolutionizing Herbal Quality Testing</h1>
+                <p>AI-powered analysis for accurate and reliable herbal product assessment</p>
+                <div class="cta-buttons">
+                    <a href="#demo" class="btn btn-primary">View Demo</a>
+                    <a href="dashboard.html" class="btn btn-secondary">Go to Dashboard</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Etonuge</h2>
+                <p>Advanced technology for herbal quality assessment</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>To provide accurate, reliable, and accessible herbal quality testing through cutting-edge electronic tongue technology and machine learning.</p>
+                    
+                    <h3>Our Vision</h3>
+                    <p>To become the global standard in non-destructive, AI-powered herbal product quality assessment.</p>
+                </div>
+                <div class="about-image">
+                    <div class="floating-card">
+                        <div class="card-content">
+                            <i class="fas fa-flask"></i>
+                            <h4>Research-Grade Analysis</h4>
+                            <p>University-backed technology for precise results</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Key Features</h2>
+                <p>Discover what makes Etonuge special</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Quality Analysis</h3>
+                    <p>Comprehensive assessment of herbal product quality using advanced sensor arrays and AI algorithms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Explainability</h3>
+                    <p>Understand the reasoning behind each assessment with our transparent AI decision-making process.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Herbal Data Insights</h3>
+                    <p>Gain valuable insights from our growing database of herbal product analyses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2>Try Our Demo</h2>
+                <p>Experience our technology in action</p>
+            </div>
+            <div class="demo-container">
+                <div class="demo-card">
+                    <div class="upload-area" id="dropZone">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Upload Herbal Sample</h3>
+                        <p>Drag & drop your sample data or <span>browse</span></p>
+                        <input type="file" id="fileInput" accept=".csv, .xlsx, .xls" style="display: none;">
+                    </div>
+                    <button id="analyzeBtn" class="btn btn-primary" disabled>Run Analysis</button>
+                    <p class="demo-note">* Accepts CSV, XLSX, XLS formats</p>
+                </div>
+                <div class="results-card" id="resultsCard">
+                    <div class="results-placeholder">
+                        <i class="fas fa-microscope"></i>
+                        <p>Analysis results will appear here</p>
+                    </div>
+                    <div class="results-content" style="display: none;">
+                        <h3>Analysis Results</h3>
+                        <div class="result-item">
+                            <span class="result-label">Quality Assessment:</span>
+                            <span class="result-value" id="qualityResult">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Confidence:</span>
+                            <span class="result-value" id="confidenceResult">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Model Version:</span>
+                            <span class="result-value">v0.1.0-demo</span>
+                        </div>
+                        <div class="analysis-details">
+                            <h4>Key Parameters</h4>
+                            <div class="parameter">
+                                <span>Phenol Content</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 78%;"></div>
+                                </div>
+                                <span>78%</span>
+                            </div>
+                            <div class="parameter">
+                                <span>Antioxidant Level</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 85%;"></div>
+                                </div>
+                                <span>85%</span>
+                            </div>
+                            <div class="parameter">
+                                <span>Purity Index</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 92%;"></div>
+                                </div>
+                                <span>92%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p>This demo is not functional yet – AI integration coming soon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>Etonuge</span>
+                    </div>
+                    <p>AI-powered Herbal Quality Testing</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> contact@etonuge.tech</p>
+                    <p><i class="fas fa-university"></i> Research Lab, University Name</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Etonuge. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
